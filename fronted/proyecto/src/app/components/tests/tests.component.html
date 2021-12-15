@@ -1,0 +1,23 @@
+<app-home></app-home>
+<div class="container">
+  <button id="puntuacion" class="btn btn-info" mat-raised-button (click)="showOnlineScore(tests)">Consultar puntuación</button>
+  <div class="row">
+    <div class="col-9 mx-auto my-3" *ngFor="let test of tests; index as i">
+      <mat-card class="card">
+        <img mat-card-img>
+
+        <mat-card-content>
+          <mat-card-title>
+            <h4>{{test.name}}</h4>
+          </mat-card-title>
+          <p class="preguntas">
+            {{test.description}}
+          <img *ngIf="i &lt; answer" id="imgRespondida" [src]="'assets/img/comprobar.png'"  title="Pregunta Respondida" width="45px" height="35px">
+          </p>
+          <button mat-raised-button [disabled]=" i &gt; answer" 
+          color="primary" (click)="makeTest(test)">Acceder</button>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>

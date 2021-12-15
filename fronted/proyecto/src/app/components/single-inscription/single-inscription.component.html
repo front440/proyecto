@@ -1,0 +1,17 @@
+<app-home></app-home>
+<form class="form" [formGroup]="formGroupInscription">
+    <p>
+        <mat-form-field appearance="fill">
+            <mat-label>Estas en la Gymkana: </mat-label>
+            <input matInput id="id_gymkana_instance" disabled value="{{nameGymkana}}">
+        </mat-form-field>
+    </p>
+    <p>
+        <mat form-field>
+            <mat-label>Grupo: </mat-label>
+            <input type="text" id="group" value="{{groupDescription}}" disabled>  
+           
+        </mat>
+    </p>
+    <button mat-raised-button color="primary" type="submit" (click)="signUp()">Inscribirme en la Gymkana</button>
+</form>

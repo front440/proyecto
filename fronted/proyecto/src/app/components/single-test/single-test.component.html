@@ -1,0 +1,32 @@
+<div *ngIf="fromTest">
+    <app-home></app-home>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto my-5">
+                <div>
+                    <mat-label>
+                        <h4>Título: {{myName}}</h4>
+                    </mat-label>
+                    <br>
+                    <p>
+                        {{myDescription}}
+                        
+                    </p>
+
+                    <div [formGroup]="form">
+                        <mat-form-field class="example-form-field">
+                            <input matInput type="text" placeholder="Hay preguntas que no necesitan una respuesta solo pulsa prueba realizada" id="answer" formControlName="response">
+                        </mat-form-field>
+                    </div>
+                    <div class="botones">
+                        <button class="btn btn-success" mat-raised-button  (click)="goBack(id)">Volver</button>
+                        <button class="btn btn-info" (click)="sendAnswer(id)"
+                            [disabled]="form.invalid">Prueba realizada</button>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

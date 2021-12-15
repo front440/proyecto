@@ -1,0 +1,19 @@
+<app-home></app-home>
+<mat-card *ngIf="!isLogued" style="text-align: center;">
+    <mat-card-content>
+        <h3>Bienvenido a Gymkanas</h3>
+        <p>IES Gran Capitán</p>
+    </mat-card-content>
+    
+</mat-card>
+<mat-card *ngIf="!isLogued" style="text-align: center;">
+    <mat-card-content>
+        <p>Para empezar necesitas estar logueado</p>
+        <button mat-raised-button color="primary"(click)="login()">Login</button>
+    </mat-card-content>
+    <div class='register'>
+
+        <a href="http://cpd.iesgrancapitan.org:9117/register" target="_blank">Registrate aqui para participar en las gymkanas</a>
+        <!-- <a href="http://127.0.0.1:8000/register" target="_blank">Registrate aqui para participar en las gymkanas</a> -->
+    </div>
+</mat-card>
